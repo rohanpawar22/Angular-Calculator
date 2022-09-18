@@ -60,13 +60,7 @@
   border-radius: 50%;
 }
 
-.btn-style-zero {
-  background: #171717;
-  color: white;
-  font-size: 22px;
-  font-family: sans-serif;
-  height: 80px;
-  font-weight: bold;
+.btn-zero {
   width: 160px;
   border-radius: 56px;
   text-align: start;

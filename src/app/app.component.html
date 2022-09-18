@@ -3,44 +3,44 @@
     <div class="block-display">
       <div class="inputs-numbers">
         <div class="num-position">
-          <p class="num1-color">89*3</p>
+          <p class="num1-color"> {{firstNumber}} {{operatorValue}} {{secondNumber}} </p>
         </div>
       </div>
       <div class="final-output">
         <div class="num2-position">
-          <p class="num2-color">267</p>
+          <p class="num2-color">{{output}}</p>
         </div>
       </div>
     </div>
     <div class="block-button-container">
       <div class="first-row">
-        <button class="btn-style btn-color">C</button>
-        <button class="btn-style btn-color">%</button>
-        <button class="btn-style btn-color">Del</button>
-        <button class="btn-style btn-orange">/</button>
+        <button class="btn-style btn-color" (click)="clear()">C</button>
+        <button class="btn-style btn-color" (click)="operatorPressed('%')">%</button>
+        <button class="btn-style btn-color" (click)="deletePressed()">Del</button>
+        <button class="btn-style btn-orange" (click)="operatorPressed('/')">/</button>
       </div>
       <div class="second-row">
-        <button class="btn-style">7</button>
-        <button class="btn-style">8</button>
-        <button class="btn-style">9</button>
-        <button class="btn-style btn-orange">*</button>
+        <button class="btn-style" (click)="buttonPressed('7')">7</button>
+        <button class="btn-style" (click)="buttonPressed('8')">8</button>
+        <button class="btn-style" (click)="buttonPressed('9')">9</button>
+        <button class="btn-style btn-orange" (click)="operatorPressed('*')">*</button>
       </div>
       <div class="third-row">
-        <button class="btn-style">4</button>
-        <button class="btn-style">5</button>
-        <button class="btn-style">6</button>
-        <button class="btn-style btn-orange">-</button>
+        <button class="btn-style" (click)="buttonPressed('4')">4</button>
+        <button class="btn-style" (click)="buttonPressed('5')">5</button>
+        <button class="btn-style" (click)="buttonPressed('6')">6</button>
+        <button class="btn-style btn-orange" (click)="operatorPressed('-')">-</button>
       </div>
       <div class="fourth-row">
-        <button class="btn-style">1</button>
-        <button class="btn-style">2</button>
-        <button class="btn-style">3</button>
-        <button class="btn-style btn-orange">+</button>
+        <button class="btn-style" (click)="buttonPressed('1')">1</button>
+        <button class="btn-style" (click)="buttonPressed('2')">2</button>
+        <button class="btn-style" (click)="buttonPressed('3')">3</button>
+        <button class="btn-style btn-orange" (click)="operatorPressed('+')">+</button>
       </div>
       <div class="fifth-row">
-        <button class="btn-style-zero">0</button>
-        <button class="btn-style">.</button>
-        <button class="btn-style btn-orange">=</button>
+        <button class="btn-style btn-zero" (click)="buttonPressed('0')">0</button>
+        <button class="btn-style" (click)="buttonPressed('.')">.</button>
+        <button class="btn-style btn-orange" (click)="equalPressed('=')">=</button>
       </div>
     </div>
   </div>
