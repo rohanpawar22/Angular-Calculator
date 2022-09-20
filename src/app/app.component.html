@@ -1,4 +1,4 @@
-<div class="center">
+<!-- <div class="center">
   <div class="container">
     <div class="block-display">
       <div class="inputs-numbers">
@@ -44,4 +44,66 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<!-- <app-button [btnName]="'C'"></app-button>
+<app-button [btnName]="'%'"></app-button>
+<app-button [btnName]="'Del'"></app-button>
+<app-button [btnName]="'/'"></app-button> -->
+
+
+<!--
+  1. color
+  2. click event
+  3. zero button style
+ -->
+
+
+
+<div class="center">
+  <div class="container">
+    <div class="block-display">
+      <div class="inputs-numbers">
+        <div class="num-position">
+          <p class="num1-color"> {{firstNumber}} {{operatorValue}} {{secondNumber}} </p>
+        </div>
+      </div>
+      <div class="final-output">
+        <div class="num2-position">
+          <p class="num2-color">{{output}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="block-button-container">
+      <div class="first-row">
+        <app-button [btnName]="'C'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'%'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'Del'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'/'" (buttonClicked)="buttonClicked($event)"></app-button>
+      </div>
+      <div class="second-row">
+        <app-button [btnName]="'7'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'8'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'9'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'*'" (buttonClicked)="buttonClicked($event)"></app-button>
+      </div>
+      <div class="third-row">
+        <app-button [btnName]="'4'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'5'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'6'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'-'" (buttonClicked)="buttonClicked($event)"></app-button>
+      </div>
+      <div class="fourth-row">
+        <app-button [btnName]="'1'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'2'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'3'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'+'" (buttonClicked)="buttonClicked($event)"></app-button>
+      </div>
+      <div class="fifth-row">
+        <app-button [btnName]="'0'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'.'" (buttonClicked)="buttonClicked($event)"></app-button>
+        <app-button [btnName]="'='" (buttonClicked)="buttonClicked($event)"></app-button>
+      </div>
+    </div>
+  </div>
+</div> -->

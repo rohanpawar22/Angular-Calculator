@@ -12,6 +12,46 @@ export class AppComponent {
   operatorValue = '';
   output = '';
 
+  buttonClicked(btnValue: any) {
+    console.log('button clicked in app component: ', btnValue);
+
+    switch (btnValue) {
+      case 'C':
+        this.clear();
+        break;
+
+      case '0':
+      case '1':
+      case '2':
+      case '3':
+      case '4':
+      case '5':
+      case '6':
+      case '7':
+      case '8':
+      case '9':
+      case '.':
+        this.buttonPressed(btnValue);
+        break;
+
+      case '%':
+      case '*':
+      case '-':
+      case '+':
+      case '/':
+        this.operatorPressed(btnValue);
+        break;
+
+      case '=':
+        this.equalPressed(btnValue);
+        break;
+
+      case 'Del':
+        this.deletePressed();
+        break;
+    }
+  }
+
   checkIsOperatorEmpty() {
     return this.operatorValue == '' ? true : false;
   }
@@ -72,5 +112,6 @@ export class AppComponent {
     this.secondNumber = '';
     this.operatorValue = '';
     this.output = '0';
+    console.log('clear called!');
   }
 }
