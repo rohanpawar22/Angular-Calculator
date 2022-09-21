@@ -12,6 +12,14 @@ export class AppComponent {
   operatorValue = '';
   output = '';
 
+  displayButtons = [
+    ['C', '%', 'Del', '/'], // 0
+    ['9', '8', '7', '*'], // 1
+    ['6', '5', '4', '-'], // 2
+    ['3', '2', '1', '+'],
+    ['0', '.', '='],
+  ];
+
   buttonClicked(btnValue: any) {
     console.log('button clicked in app component: ', btnValue);
 

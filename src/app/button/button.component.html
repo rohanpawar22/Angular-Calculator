@@ -1,2 +1,5 @@
-<button class="btn-style btn-color" (click)="buttonPressed()"
-    [ngStyle]="{'background-color':'red'}">{{btnName}}</button>
+<button class="btn-style btn-color"
+    [ngClass]="{ 'btn-orange': checkOrange(), 'btn-red': checkRed(), 'btn-blue': checkBlue(), 'btn-zero': btnName === '0' }"
+    (click)="buttonPressed()">
+    {{btnName}}
+</button>

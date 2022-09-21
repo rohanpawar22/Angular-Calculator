@@ -16,4 +16,32 @@ export class ButtonComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  checkBlue() {
+    if (this.btnName === '=') {
+      return true;
+    }
+    return false;
+  }
+
+  checkRed() {
+    if (this.btnName === 'Del') {
+      return true;
+    }
+    return false;
+  }
+
+  checkOrange() {
+    if (
+      this.btnName === '/' ||
+      this.btnName === '*' ||
+      this.btnName === '+' ||
+      this.btnName === '-' ||
+      this.btnName === '%' ||
+      this.btnName === 'C'
+    ) {
+      return true;
+    }
+    return false;
+  }
 }

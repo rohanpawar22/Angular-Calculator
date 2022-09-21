@@ -77,6 +77,16 @@
   color: white;
 }
 
+.btn-red {
+  background: #ff0000;
+  color: white;
+}
+
+.btn-blue {
+  background: #0084ff;
+  color: white;
+}
+
 .btn-style:hover {
   background-color: white;
   color: black;

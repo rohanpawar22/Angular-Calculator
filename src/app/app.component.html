@@ -65,7 +65,8 @@
     <div class="block-display">
       <div class="inputs-numbers">
         <div class="num-position">
-          <p class="num1-color"> {{firstNumber}} {{operatorValue}} {{secondNumber}} </p>
+          <p class="num1-color" [ngStyle]="{'color': firstNumber === '' ? 'red' : 'green' }"> {{firstNumber}}
+            {{operatorValue}} {{secondNumber}} </p>
         </div>
       </div>
       <div class="final-output">
@@ -75,35 +76,10 @@
       </div>
     </div>
     <div class="block-button-container">
-      <div class="first-row">
-        <app-button [btnName]="'C'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'%'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'Del'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'/'" (buttonClicked)="buttonClicked($event)"></app-button>
-      </div>
-      <div class="second-row">
-        <app-button [btnName]="'7'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'8'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'9'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'*'" (buttonClicked)="buttonClicked($event)"></app-button>
-      </div>
-      <div class="third-row">
-        <app-button [btnName]="'4'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'5'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'6'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'-'" (buttonClicked)="buttonClicked($event)"></app-button>
-      </div>
-      <div class="fourth-row">
-        <app-button [btnName]="'1'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'2'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'3'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'+'" (buttonClicked)="buttonClicked($event)"></app-button>
-      </div>
-      <div class="fifth-row">
-        <app-button [btnName]="'0'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'.'" (buttonClicked)="buttonClicked($event)"></app-button>
-        <app-button [btnName]="'='" (buttonClicked)="buttonClicked($event)"></app-button>
+      <div class="first-row" *ngFor="let row of displayButtons; let i=index">
+        <app-button *ngFor="let btnValue of displayButtons[i]" [btnName]="btnValue"
+          (buttonClicked)="buttonClicked($event)"> </app-button>
       </div>
     </div>
   </div>
-</div> -->
+</div>
